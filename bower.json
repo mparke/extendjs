@@ -1,0 +1,20 @@
+{
+  "name": "extendjs",
+  "version": "0.0.1",
+  "authors": [
+    "mparke <mparke78@gmail.com>"
+  ],
+  "description": "Object Extend CommonJS Module",
+  "main": "extend.js",
+  "keywords": [
+    "extend"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
