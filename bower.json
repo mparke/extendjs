@@ -4,7 +4,7 @@
   "authors": [
     "mparke <mparke78@gmail.com>"
   ],
-  "description": "Object Extend CommonJS Module",
+  "description": "Extend Module",
   "main": "extend.js",
   "keywords": [
     "extend"

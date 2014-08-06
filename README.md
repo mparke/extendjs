@@ -1,4 +1,4 @@
 extendjs
 ========
 
-Object Extend CommonJS Module
+Object Extend Module
