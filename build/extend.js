@@ -1,0 +1,2 @@
+// @preserve extendjs, copyright Matthew Parke 2014, license https://github.com/mparke/eventsjs/blob/master/LICENSE
+!function(e,t){function n(){var e=r.call(arguments);if(!e.length)throw new Error("Extend must have at least 2 objects as arguments.");return e.reduce(function(e,t,n){for(var n in t)e[n]=t[n];return e})}var r=t.prototype.slice;"object"==typeof module?define(function(){return n}):"function"==typeof define?module.exports=n:e.extend=n}(window,Array);
