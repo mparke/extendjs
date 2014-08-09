@@ -18,9 +18,9 @@
   }
 
   if (typeof module === 'object') {
-    define(function () { return extend; });
-  } else if (typeof define === 'function') {
     module.exports = extend;
+  } else if (typeof define === 'function') {
+    define(function () { return extend; });
   } else {
     window.extend = extend;
   }
