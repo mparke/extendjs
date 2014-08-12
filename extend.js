@@ -2,10 +2,16 @@
 (function (window, Array) {
   var slice = Array.prototype.slice;
 
+  /**
+  *  Extends an object with any number of other objects
+  *  @param {object} the base object to extend
+  *  @param {object} any number of additional objects
+  *  @return {object} the extended base object
+  */
   function extend () {
     var args = slice.call(arguments);
 
-    if (!args.length) {
+    if (args.length < 2) {
       throw new Error('Extend must have at least 2 objects as arguments.');
     }
 
