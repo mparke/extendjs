@@ -2,7 +2,7 @@
 (function (window, Array) {
   var slice = Array.prototype.slice;
 
-  function extend () {
+  function extend() {
     var args = slice.call(arguments);
 
     if (!args.length) {
@@ -20,7 +20,7 @@
   if (typeof module === 'object') {
     module.exports = extend;
   } else if (typeof define === 'function') {
-    define(function () { return extend; });
+    define(function() { return extend; });
   } else {
     window.extend = extend;
   }
