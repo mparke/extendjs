@@ -53,7 +53,7 @@ gulp.task('commit-bump', function() {
 });
 
 gulp.task('tag', function() {
-  git.tag('v' + require('./bower.json').version, function(err) {
+  git.tag('v' + require('./bower.json').version, 'New Version', function(err) {
     if (err) {
       throw err;
     }
