@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var bump = require('gulp-bump');
 var git = require('gulp-git');
 var del = require('del');
 var header = require('gulp-header');
@@ -30,23 +31,23 @@ gulp.task('clean', function(cb) {
 gulp.task('bump-patch', function(){ 
   return gulp.src(paths.json)
     .pipe(bump())
-    .pipe(gulp.dest('./'))
-    .pipe(git.add())
-    .pipe(git.commit('Bump version to ' + require('./bower.json').version));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('bump-minor', function(){ 
   return gulp.src(paths.json)
     .pipe(bump({ type: 'minor' }))
-    .pipe(gulp.dest('./'))
-    .pipe(git.add())
-    .pipe(git.commit('Bump version to ' + require('./bower.json').version));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('bump-major', function(){ 
   return gulp.src(paths.json)
     .pipe(bump({ type: 'major' }))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('commit-bump', function() {
+  return gulp.src(paths.json)
     .pipe(git.add())
     .pipe(git.commit('Bump version to ' + require('./bower.json').version));
 });
