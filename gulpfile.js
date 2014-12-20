@@ -30,12 +30,12 @@ gulp.task('bump-major', function(){
   .pipe(gulp.dest('./'));
 });
 
-gulp.task('scripts', ['clean'], function() {
+gulp.task('js', ['clean'], function() {
   return gulp.src(paths.scripts)
     .pipe(uglify({ preserveComments: 'some' }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', [
-  'scripts'
+  'js'
 ], function(){});
