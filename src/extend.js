@@ -1,11 +1,16 @@
-// @preserve extendjs, copyright Matthew Parke 2014, license https://github.com/mparke/eventsjs/blob/master/LICENSE
 (function (window, Array) {
   var slice = Array.prototype.slice;
 
+  /**
+  *  Extends an object with any number of other objects
+  *  @param {object} the base object to extend
+  *  @param {object} any number of additional objects
+  *  @return {object} the extended base object
+  */
   function extend () {
     var args = slice.call(arguments);
 
-    if (!args.length) {
+    if (args.length < 2) {
       throw new Error('Extend must have at least 2 objects as arguments.');
     }
 
@@ -18,9 +23,9 @@
   }
 
   if (typeof module === 'object') {
-    define(function () { return extend; });
-  } else if (typeof define === 'function') {
     module.exports = extend;
+  } else if (typeof define === 'function') {
+    define(function() { return extend; });
   } else {
     window.extend = extend;
   }

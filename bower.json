@@ -1,8 +1,8 @@
 {
   "name": "extendjs",
-  "version": "0.0.3",
+  "version": "0.1.1",
   "authors": [
-    "mparke <mparke78@gmail.com>"
+    "Matthew Parke <mparke78@gmail.com>"
   ],
   "description": "Extend Module",
   "main": "extend.js",
